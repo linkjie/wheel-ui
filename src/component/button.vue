@@ -1,17 +1,20 @@
 <template>
         <button class="w-button" :class="[type]" >
             <w-icon :icon='icon'></w-icon>
-            <w-icon class="loadding" v-if="loadding === true " icon='icon-loadding'>
+            <w-icon class="loading" v-if="loading === true " icon='icon-loadding'>
                 </w-icon><span><slot></slot></span> 
             </button>
 
 </template>
 
 <script>
-
+    import Icon from './icon.vue'
     export default {
-        props:['type','icon','loadding'],
- 
+    props:['type','icon','loading'],
+    name:'w-button',
+    components:{
+       'w-icon':Icon 
+    }
     }
 </script>
 
@@ -83,7 +86,7 @@
          transform: rotate(360deg);
     }
 }
-.loadding{
+.loading{
     animation: spin 1s infinite linear;
 }
 

@@ -2,11 +2,14 @@
     <svg v-if='icon' class="icon" aria-hidden="true">
             <use :xlink:href=" '#'+icon "></use>
         </svg>
+    
 </template>
 
 <script>
+
     export default {
-        props:['icon']
+        props:['icon'],
+        name:'w-icon',
     }
 </script>
 
@@ -15,3 +18,4 @@
        font-size: 14px;
    }
 </style>
+

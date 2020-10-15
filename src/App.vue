@@ -12,7 +12,7 @@
         <w-button type="primary"  icon="icon-upload">上传</w-button>
         <w-button type="primary"  icon="icon-share"></w-button>
         <br>
-        <w-button type="primary" :loadding='true' >加载中</w-button>
+        <w-button type="primary" :loading='true' >加载中</w-button>
          <br>
          <w-button-group>
          <w-button type="primary" icon='icon-left'>上一页</w-button>
