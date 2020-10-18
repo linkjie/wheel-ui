@@ -18,7 +18,7 @@
   "author": "lkj",
   "license": "MIT",
   "dependencies": {
-    "init-ui": "0.0.7",
+    "element-ui": "^2.13.2",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4"
   },
@@ -37,6 +37,7 @@
     "sass": "^1.27.0",
     "sinon": "^9.2.0",
     "sinon-chai": "^3.5.0",
+    "stylus": "^0.54.8",
     "vue-template-compiler": "^2.6.12"
   }
 }

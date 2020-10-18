@@ -1,53 +1,92 @@
 <template>
-    <div id="app">
-        <w-button >默认按钮</w-button>
-        <w-button type="primary" >主要按钮</w-button>
-        <w-button type="success">成功按钮</w-button>
-        <w-button type="warning">警告按钮</w-button>
-        <w-button type="danger">危险按钮</w-button>
+    <div id='app'>
+        默认
         <br>
-        <w-button type="primary"  icon="icon-edit"></w-button>
-        <w-button type="primary" icon="icon-search">搜索</w-button>
-        <w-button type="primary" icon="icon-delete"></w-button>
-        <w-button type="primary"  icon="icon-upload">上传</w-button>
-        <w-button type="primary"  icon="icon-share"></w-button>
+        <w-button @click="open" >消息提示</w-button>
+        <!-- <button @click="log">xxx</button> -->
         <br>
-        <w-button type="primary" :loading='true' >加载中</w-button>
-         <br>
-         <w-button-group>
-         <w-button type="primary" icon='icon-left'>上一页</w-button>
-         <w-button type="primary" >更多</w-button>
-         <w-button type="primary" >下一页<w-icon icon="icon-right"/></w-button>
-        </w-button-group>
-         </div>
+        状态
+        
+        <div class="statu">
+            <w-button type="success"  @click="openSuccess">成功</w-button>
+            <w-button type="warning"  @click="openWarning">警告</w-button>
+            <w-button type="danger"  @click="openError">错误</w-button>
+        </div>
+        close
+        <div class="close">
+            <w-button @click="open('close')" >提示</w-button>
+            <w-button type="success"  @click="openSuccess('close')">成功</w-button>
+            <w-button type="warning"  @click="openWarning('close')">警告</w-button>
+            <w-button type="danger"  @click="openError('close')">错误</w-button>
+        </div>
+ 
+        
+    </div>
 </template>
 
 <script>
+    import Vue from 'vue'
+    import Message from './component/Toast/plugin'
+    Vue.use(Message)
+    import Messages from 'element-ui'
+    Vue.use(Messages)
+    import 'element-ui/lib/theme-chalk/index.css'
+   
     export default {
-        methods:{
-            add(){
-                console.log('aaa');
+        data(){
+            return {
+                
             }
-        }
+        },
+        methods:{
+            open(close){
+                 this.$messages({
+                    message:"这是一条消息提示",
+                    showClose:true,
+                    
+                    onClose:(instanse)=>{
+                       console.log(instanse);
+                    },  
+                })
+            },
+            openSuccess(close){
+                this.$messages({
+                    message:"这是一个成功提示",
+                    type:'success',
+                    showClose:close ==='close' && true
+                
+                })
+            },
+             openWarning(close){
+                this.$messages({
+                    message:"这是一个警告提示",
+                    type:'warning',
+                    showClose:close ==='close' && true
+                    ,position:'center'
+               })
+            },
+             openError(close){
+                this.$messages({
+                    message:"这是一个错误提示",
+                    type:'error',
+                    showClose:close ==='close' && true
+                    ,position:'bottom'
+               })
+            },
+        
+
+        },
+        
+    
     }
 </script>
 
-<style lang="scss" >
-button, input, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
-}
- .icon {
-       width: 1em; height: 1em;
-       vertical-align: -0.15em;
-       fill: currentColor;
-       overflow: hidden;
+<style lang="scss" scoped>
+    .statu{
+        display: flex;
+     button{
+        margin-right: 10px;
+        
     }
-#app{
-    width: 1000px;
-    margin: 0 auto;
-}
-
+    }
 </style>

@@ -1,5 +1,5 @@
 <template>
-        <button class="w-button" :class="[type]" >
+        <button class="w-button" :class="[type]" @click="handelClick" >
             <w-icon :icon='icon'></w-icon>
             <w-icon class="loading" v-if="loading === true " icon='icon-loadding'>
                 </w-icon><span><slot></slot></span> 
@@ -14,6 +14,11 @@
     name:'w-button',
     components:{
        'w-icon':Icon 
+    },
+    methods:{
+        handelClick(){
+            this.$emit('click','')
+        }
     }
     }
 </script>

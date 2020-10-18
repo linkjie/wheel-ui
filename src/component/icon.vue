@@ -1,8 +1,7 @@
-<template>
-    <svg v-if='icon' class="icon" aria-hidden="true">
+<template>  
+        <svg v-if='icon' class="icon" aria-hidden="true">
             <use :xlink:href=" '#'+icon "></use>
-        </svg>
-    
+        </svg> 
 </template>
 
 <script>
@@ -13,9 +12,15 @@
     }
 </script>
 
-<style lang="scss" scoped>
-   .icon{
-       font-size: 14px;
-   }
+<style lang="scss" >
+    .icon {
+       display: inline-block;
+       width: 1em; height: 1em;
+       vertical-align: baseline;
+       line-height: 1;
+       fill: currentColor;
+       overflow: hidden;
+       font-size: inherit;
+    }
 </style>
 
