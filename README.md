@@ -50,3 +50,4 @@ new Vue({
 
 
 ## 文档
+[Wheel UI 官网](http://lin-kangjie.gitee.io/wheel-ui)
