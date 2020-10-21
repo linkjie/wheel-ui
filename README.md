@@ -9,10 +9,7 @@
     ```
     npm i --save lkj-wheel-ui
     ```
-2 . 引入wheel UI
-你可以引入整个 Wheel，或是根据需要仅引入部分组件。
-
-## 完整引入
+2. 引入wheel UI
 
 在 main.js 中写入以下内容：
 ```javascript
@@ -30,7 +27,7 @@ new Vue({
 
 ```
 
-## 引入部分组件
+引入部分组件
 
 ```javascript
 import Vue from 'vue'
