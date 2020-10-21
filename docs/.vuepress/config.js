@@ -5,9 +5,10 @@ module.exports = {
     themeConfig: {
       displayAllHeaders: true,
         nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Guide', link: '/guide/' },
-          { text: 'External', link: 'https://google.com' },
+          { text: '主页', link: '/' },
+          { text: '文档', link: '/guide/' },
+          { text: 'GitHub', link: 'https://google.com' },
+          { text: 'Gitee', link: 'https://gitee.com/lin-kangjie/wheel'}
         ],
         sidebar: [
             {
