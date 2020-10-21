@@ -1,4 +1,4 @@
-import Message from './message'
+import Message from './toast'
 
 function createToast(Vue,message){
     if(typeof message === 'string'){
@@ -15,13 +15,14 @@ function createToast(Vue,message){
    
 }
 
+const Toast = {}
 
-Message.install=function(Vue){
-    Vue.prototype.$messages = function(message){
+Toast.install=function(Vue){
+    Vue.prototype.$toast = function(message){
        
         createToast(Vue,message)  
     }
 }
 
 
-export default Message
+export { Toast }

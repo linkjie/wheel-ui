@@ -1,11 +1,10 @@
 <template>
     <div>
-        {{activeName}}
         <wl-tabs class="tabs" >
             <wl-tab-nav v-model='activeName' >
-                <wl-tab-item label='home'>Home</wl-tab-item>
-                <wl-tab-item label='about'>About</wl-tab-item>
-                <wl-tab-item label='profile'>Profile</wl-tab-item>
+                <wl-tab-item label='home'>用户管理</wl-tab-item>
+                <wl-tab-item label='about'>关于</wl-tab-item>
+                <wl-tab-item label='profile'>个人档案</wl-tab-item>
                 
             </wl-tab-nav>
             
@@ -13,6 +12,7 @@
                 <wl-tab-pane name='home' >Home</wl-tab-pane>
                 <wl-tab-pane name='about'>About</wl-tab-pane>
                 <wl-tab-pane name='profile'>Profile</wl-tab-pane>
+            </wl-tab-content>
         </wl-tabs>
     </div>
 </template>
